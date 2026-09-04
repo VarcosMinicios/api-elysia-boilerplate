@@ -19,6 +19,7 @@
       "@core/*": ["./src/core/*"],
       "@src/*": ["./src/*"],
       "@user/*": ["./src/user/*"],
+      "@auth/*": ["./src/auth/*"],
     }
   },
   "include": ["src/**/*"],

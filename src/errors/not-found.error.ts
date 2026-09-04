@@ -1,9 +1,9 @@
-export class NotFoundError extends Error {
-  status = 404;
+import { HttpError } from '@errors/http.error';
 
+export class NotFoundError extends HttpError {
   override name = 'NOT_FOUND_ERROR';
 
   constructor() {
-    super('Resource not found');
+    super('Resource not found', 404);
   }
 }
