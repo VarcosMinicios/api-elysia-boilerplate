@@ -6,6 +6,8 @@ import { db } from "@database/index";
 import cors from "@elysiajs/cors";
 import globalExceptionHandler from "@core/global-exception.handler";
 
+import UserController from "@user/controllers/user.controller";
+
 const app = new Elysia()
   .use(cors())
   .onRequest(() => {
@@ -18,6 +20,7 @@ const app = new Elysia()
     RequestContext.getEntityManager()?.clear();
   })
   .use(globalExceptionHandler)
+  .use(UserController)
   .listen(3001);
 
 console.log(

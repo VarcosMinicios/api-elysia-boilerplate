@@ -33,7 +33,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mysql_data_dev:/var/lib/mysql
+      - mysql_dev:/var/lib/mysql
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
@@ -61,4 +61,4 @@ services:
     command: ["bun", "run", "migration:up"]
 
 volumes:
-  mysql_data_dev:
+  mysql_dev:
