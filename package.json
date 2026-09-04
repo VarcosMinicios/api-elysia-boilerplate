@@ -2,14 +2,23 @@
   "name": "api-elysia-boilerplate",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "build": "NODE_ENV=production bun build src/index.ts --outdir ./dist --target bun --minify-whitespace --minify-syntax --sourcemap --external \"pg\" --external \"pg-query-stream\" --external \"sqlite3\" --external \"better-sqlite3\" --external \"tedious\" --external \"oracledb\" --external \"mariadb\" --external \"mysql\" --external \"libsql\"",
+    "dev": "bun run --watch src/index.ts",
+    "migration:create": "bunx mikro-orm migration:create",
+    "migration:up": "bunx mikro-orm migration:up"
   },
   "dependencies": {
+    "@mikro-orm/core": "^7.1.15",
+    "@mikro-orm/migrations": "^7.1.15",
+    "@mikro-orm/mysql": "^7.1.15",
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@elysiajs/cors": "^1.4.2",
+    "@mikro-orm/cli": "^7.1.15",
+    "bun-types": "latest",
+    "tinyglobby": "^0.2.17",
+    "tsx": "^4.23.13"
   },
   "module": "src/index.js"
 }
