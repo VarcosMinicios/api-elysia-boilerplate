@@ -1,0 +1,125 @@
+---
+description: Product-specific UI, credible content, and visual quality checks that prevent generic AI-generated interfaces.
+alwaysApply: true
+---
+
+# Intentional Product UI
+
+Apply this rule when creating, editing, or reviewing user-facing interfaces. For unrelated backend work, do not initiate a UI redesign.
+
+## Objective
+
+Build an interface that feels intentionally designed for this product, its audience, and its content. Avoid interchangeable AI-generated templates. Optimize for clarity, identity, credibility, and complete behavior, rather than novelty or decoration.
+
+This is a decision and review framework, not a universal visual theme. Do not force every project into the same palette, typography, hero, card system, or composition. Gradients, serif fonts, rounded buttons, component libraries, and familiar layouts are valid when they serve a clear purpose. Their presence alone is not a defect.
+
+## Before implementation
+
+1. Inspect the existing product brief, routes, components, styles, assets, copy, and design tokens.
+2. Identify the audience, the main task for the screen, the information needed to complete it, and the intended brand character.
+3. Preserve established design decisions unless a redesign is requested or a concrete usability problem requires a scoped correction.
+4. For a new visual direction, briefly state the rationale for typography, color, density, composition, and imagery in product-specific terms. Avoid relying on adjectives such as modern, premium, clean, or beautiful as specifications.
+5. Use supplied references to understand hierarchy, proportions, and visual language; do not reproduce a competitor's entire layout or identity.
+6. When information is missing, proceed with conservative assumptions. Ask only when the missing fact materially changes the work. Never invent business facts.
+
+## 1. Color and gradients
+
+- Define semantic color roles: background, surface, primary action, text, muted text, border, success, warning, and error.
+- Do not automatically choose purple-to-blue gradients, glowing blobs, gradient headlines, or neon accents because the product involves AI or software.
+- Use gradients only when they support the chosen identity or communicate something useful. Keep them subordinate to readability and action hierarchy.
+- Do not replace these defaults with an equally automatic monochrome or beige theme.
+
+## 2. Calls to action
+
+- Choose the primary action from the user's actual next step. Give secondary actions visibly lower emphasis.
+- Use specific labels that predict what happens after clicking. Avoid generic slogans and identical CTAs with conflicting destinations.
+- Choose button shape, scale, icons, and effects from the design system; do not default to oversized glowing pills with an arrow on every button.
+- Do not promise a free trial, instant access, no credit card, or a specific onboarding duration unless confirmed.
+- Implement the destination and relevant hover, focus, loading, disabled, success, and error states. Never leave a finished-looking action inert.
+
+## 3. Favicon and page identity
+
+- Inspect favicon, browser title, page description, web app manifest, and social preview metadata when relevant to the scope.
+- Replace starter framework or builder defaults with approved product identity assets.
+- Use a simple, legible favicon that works at small sizes. Do not fabricate a final logo when none is supplied; flag the missing asset.
+- Keep product names consistent across visible UI and metadata.
+
+## 4. Builder and template leftovers
+
+- Check for unintended builder badges, demo labels, sample logos, scaffold copy, placeholder project names, and development-only elements in production-facing pages.
+- Remove optional template leftovers where permitted. Preserve required license notices and attribution. Do not bypass platform restrictions to hide branding.
+- Reuse accessible component libraries as implementation foundations, then adapt their visual tokens and composition to this product. Do not rewrite working components merely to look different.
+
+## 5. Typography
+
+- Select typefaces for audience, brand, language coverage, reading conditions, and available weights.
+- Do not automatically insert a contrasting italic serif word into every hero headline to imply sophistication.
+- Serif typography is allowed when justified by the identity. A specific font is not inherently an AI signature.
+- Establish a coherent hierarchy through size, weight, line height, line length, and spacing. Do not depend on font changes alone.
+- Check actual content for awkward wrapping, clipping, excessive uppercase, and weak secondary-text readability across screen sizes.
+
+## 6. Social proof and credibility
+
+- Publish only verified testimonials, customer logos, ratings, user counts, performance claims, certifications, and commercial results.
+- Never generate fictional customers, quotations, avatars presented as customers, inflated adoption counts, or fake scarcity.
+- If proof is unavailable, omit the section or use an honest product demonstration, sample output, or explanation of capabilities.
+- Keep demonstration data clearly distinguishable from real customer evidence.
+
+## 7. Domain and links
+
+- Flag preview subdomains and placeholder URLs as launch-readiness issues when reviewing a production launch. They are acceptable in development.
+- Use a confirmed production URL for canonical and sharing metadata. Do not invent one or buy/configure a domain without authorization.
+- Inspect navigation, footer, social, contact, and CTA destinations. Remove or flag placeholder links rather than leaving dead controls.
+- Distinguish code changes from external configuration the owner still needs to complete.
+
+## 8. Copy
+
+- Explain what the product does, for whom, and which concrete problem it solves.
+- Replace interchangeable claims such as "revolutionize your workflow," "unlock your potential," or "the future of X" with specific, supportable statements.
+- Mention AI when it explains a useful capability, not as a substitute for the value proposition.
+- Match terminology, tone, and language to the audience. Avoid repetitive headings, filler paragraphs, and sections added merely to occupy a template.
+- Write useful form labels, errors, empty states, and confirmations. Explain the next step when appropriate.
+- Do not invent features, integrations, prices, guarantees, or business outcomes to improve the design.
+
+## 9. Footer
+
+- Include only relevant navigation, approved identity details, real contact routes, and applicable legal links.
+- Scale the footer to the amount of useful content. Do not add large multicolumn footers with empty categories to make a small product appear established.
+- Do not fabricate company addresses, registration details, policy pages, or social profiles.
+- Maintain visual continuity with the rest of the product and verify every link.
+
+## 10. Structure and composition
+
+- Build page structure from user questions, task sequence, information priority, and available evidence.
+- Do not automatically use the same centered hero, badge, gradient headline, two buttons, logo strip, three feature cards, testimonials, pricing, FAQ, and final CTA.
+- Familiar patterns are allowed when appropriate. Do not introduce unusual navigation or arbitrary asymmetry just to appear original.
+- Choose tables, lists, forms, timelines, editorial sections, or cards according to the information. Do not put every text block inside a rounded bordered card.
+- Vary emphasis and grouping according to meaning, while keeping spacing and alignment systematic.
+- Marketing pages should support understanding and evaluation. Application screens should support actual work; do not impose landing-page composition on dashboards.
+
+## Interaction and visual finish
+
+- Use a consistent spacing scale, alignment system, corner-radius family, icon style, border treatment, and elevation hierarchy.
+- Use decoration only when it adds identity, hierarchy, or useful feedback. Avoid gratuitous sparkles, glass panels, animated counters, floating shapes, and hover lift on every element.
+- Prefer real product visuals or accurate demonstrations over unrelated stock imagery and decorative fake dashboards.
+- Make motion purposeful and respect reduced-motion preferences.
+- Preserve keyboard navigation, visible focus, semantic markup, readable contrast, accessible names, and practical touch targets.
+- Handle applicable empty, loading, error, success, validation, and overflow states. Check long text and realistic data, not only short idealized placeholders.
+
+## Required review before completion
+
+Inspect the rendered result with the available preview or browser tools. Check a narrow mobile viewport and a desktop viewport, plus any breakpoint where the layout changes substantially. If rendering is unavailable, explicitly state that visual validation remains pending; do not claim to have inspected screenshots.
+
+Review these questions and fix concrete issues within scope:
+
+1. If the logo were removed, what product-specific choices would remain? Could this exact page describe several unrelated businesses after changing only names?
+2. Is the screen's purpose and primary action immediately understandable?
+3. Is every visual treatment justified by identity, hierarchy, content, or interaction?
+4. Are typography, spacing, alignment, colors, and component states consistent?
+5. Are claims, social proof, pricing, and links real and accurate?
+6. Are there starter assets, builder leftovers, placeholder text, or dead actions?
+7. Does the layout work with realistic content on mobile and desktop?
+8. Does every visible interactive element behave as its label suggests?
+9. Did the changes preserve existing functionality and the requested scope?
+
+Do not declare a UI polished merely because it compiles. Report the key changes, what was actually verified, and any missing assets or external setup. Prefer a small number of coherent, product-specific decisions over a large number of decorative effects.
